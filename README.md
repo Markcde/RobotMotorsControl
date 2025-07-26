@@ -1,4 +1,3 @@
-
 # RobotMotorsControl
 
 ## Общее описание проекта
