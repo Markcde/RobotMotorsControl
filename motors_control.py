@@ -14,4 +14,13 @@
        robot = Robot()
        robot.set_speed(5)
        robot.stop()
-   
+   import time
+
+   def smooth_speed_change(robot, target_speed, duration):
+       initial_speed = robot.speed
+       step = (target_speed - initial_speed) / (duration * 10)  # 10 шагов в секунду
+       for _ in range(duration * 10):
+           initial_speed += step
+           robot.set_speed(initial_speed)
+           time.sleep(0.1)
+      
